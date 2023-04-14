@@ -3,9 +3,9 @@ package fr.marie.harrypotterjavafx.main_pack;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
-import org.example.console.Display;
+import fr.marie.harrypotterjavafx.console.Display;
 
-public class Wizard extends java.lang.Character {
+public class Wizard extends Character {
     private Pet pet;
     private Wand wand;
     private House house;

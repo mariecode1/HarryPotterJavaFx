@@ -1,7 +1,7 @@
 package fr.marie.harrypotterjavafx.console;
 
-import org.example.levels.*;
-import org.example.main_pack.*;
+import fr.marie.harrypotterjavafx.levels.*;
+import fr.marie.harrypotterjavafx.main_pack.*;
 
 import java.util.Random;
 import java.util.Scanner;

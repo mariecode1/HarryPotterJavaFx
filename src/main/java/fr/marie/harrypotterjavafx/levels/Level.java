@@ -1,6 +1,6 @@
 package fr.marie.harrypotterjavafx.levels;
-import org.example.console.Display;
-import org.example.main_pack.*;
+import fr.marie.harrypotterjavafx.console.Display;
+import fr.marie.harrypotterjavafx.main_pack.*;
 import java.util.Scanner;
 
 public class Level {

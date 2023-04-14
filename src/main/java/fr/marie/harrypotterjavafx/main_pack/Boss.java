@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import org.example.console.Display;
+import fr.marie.harrypotterjavafx.console.Display;
 public class Boss extends AbstractEnemy{
 
     public Boss(String name, float life, float power){

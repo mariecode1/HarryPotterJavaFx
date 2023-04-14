@@ -1,6 +1,6 @@
 package fr.marie.harrypotterjavafx.main_pack;
 
-import org.example.console.Display;
+import fr.marie.harrypotterjavafx.console.Display;
 
 import java.util.List;
 import java.util.ArrayList;

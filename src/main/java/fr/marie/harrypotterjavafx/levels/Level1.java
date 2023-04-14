@@ -3,9 +3,9 @@ package fr.marie.harrypotterjavafx.levels;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import org.example.console.Display;
-import org.example.main_pack.*;
-import org.example.main_pack.Object;
+import fr.marie.harrypotterjavafx.console.Display;
+import fr.marie.harrypotterjavafx.main_pack.*;
+import fr.marie.harrypotterjavafx.main_pack.Object;
 
 public class Level1 {
 

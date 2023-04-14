@@ -2,7 +2,7 @@ package fr.marie.harrypotterjavafx.main_pack;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import org.example.console.Display;
+import fr.marie.harrypotterjavafx.console.Display;
 
 //This class gives access to the shop so the player can shop potions.
 public class Shop {
