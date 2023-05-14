@@ -1,11 +1,16 @@
 package fr.marie.harrypotterjavafx.levels;
 
+import fr.marie.harrypotterjavafx.console.Display;
+import fr.marie.harrypotterjavafx.interfaceFx.vue.WindowTalk;
+import fr.marie.harrypotterjavafx.main_pack.Object;
+import fr.marie.harrypotterjavafx.main_pack.*;
+import fr.marie.harrypotterjavafx.main_pack.Wizard;
+import fr.marie.harrypotterjavafx.main_pack.Enemy;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import fr.marie.harrypotterjavafx.console.Display;
-import fr.marie.harrypotterjavafx.main_pack.*;
-import fr.marie.harrypotterjavafx.main_pack.Object;
+import static fr.marie.harrypotterjavafx.interfaceFx.vue.WindowTalk.nextButton;
 
 public class Level1 {
 
@@ -48,39 +53,47 @@ public class Level1 {
         Display.text("Use the spell Wingardium Leviosa ✨ to drop objects on the troll's head.\n");
         Display.text("🧙‍♂️ Advice :Throw at it the heaviest one !\n");
         Display.space();
+        //display in the window
+        WindowTalk.printInWindow("Level 1 : The Philosopher’s Stone");
+        WindowTalk.printInWindow("You are in the donjon's toilets.\n");
+        WindowTalk.printInWindow("The troll is getting in your way.\n");
+        WindowTalk.printInWindow("Use the spell Wingardium Leviosa ✨ to drop objects on the troll's head.\n");
+        WindowTalk.printInWindow("🧙‍♂️ Advice :Throw at it the heaviest one !\n");
 
         // Level 1
         int counter = 0;
         //you can't throw more than 6 objects
-        while (counter < 9 && enemy.getLife()>0 && wizard.getLife()>0 ) {
+            while (counter < 9 && enemy.getLife() > 0 && wizard.getLife() > 0) {
                 System.out.println("Which object to you want to choose ? (1-chandelier , 2-table, 3-rock ou 4-lavabo)");
                 int index = 0;
-                while (index>4 ||index<1){
+                while (index > 4 || index < 1) {
                     System.out.println("Please, enter a number from 1 to 4");
                     index = scanner.nextInt();
                 }
-                Object object = objects.get(index-1);
-                System.out.println("You cast Wingardium Leviosa on the "+ object.getName()+ ". ");
+                Object object = objects.get(index - 1);
+                System.out.println("You cast Wingardium Leviosa on the " + object.getName() + ". ");
                 counter++;
-                float damage = (float)(object.getWeight()* wingardiumLeviosa.getEffectiveness()*0.01* wizard.getHouse().getSpellEff() * wizard.getHouse().getPrecisionEff());
+                float damage = (float) (object.getWeight() * wingardiumLeviosa.getEffectiveness() * 0.01 * wizard.getHouse().getSpellEff() * wizard.getHouse().getPrecisionEff());
                 System.out.println("The " + object.getName() + " falls on the troll's head and inflicts " + damage + " damage points.");
                 enemy.setLife(enemy.getLife() - damage);
                 Display.space();
-                System.out.println("\033[38;2;255;165;0mThe Troll : "+ (int)(enemy.getLife()) +" HP | 🧟‍♂️☢️\033[0m ");
+                System.out.println("\033[38;2;255;165;0mThe Troll : " + (int) (enemy.getLife()) + " HP | 🧟‍♂️☢️\033[0m ");
                 Display.space();
 
                 //intensity of the troll's attack after each wizard attack
                 System.out.println("The troll is attacking 💥");
-                float intensity = (float)(Math.random());
-                float enemyDamage= (enemy.getPower()*intensity)/wizard.getHouse().getResistanceEff();
-                wizard.setLife(wizard.getLife()- enemyDamage);
+                float intensity = (float) (Math.random());
+                float enemyDamage = (enemy.getPower() * intensity) / wizard.getHouse().getResistanceEff();
+                wizard.setLife(wizard.getLife() - enemyDamage);
                 Display.space();
-                System.out.println("\033[31mYou : "+ (int)(wizard.getLife()) +" HP | 🧙‍♀️❤️\033[0m ️");
+                System.out.println("\033[31mYou : " + (int) (wizard.getLife()) + " HP | 🧙‍♀️❤️\033[0m ️");
                 Display.space();
 
 
                 System.out.println("You have " + (9 - counter) + " objects left");
-        }
+            }
+
+
         // Fin du niveau
         if (wizard.getLife() <= 0) {
             System.out.println("The troll has defeated you! Game-over. ☠️");
@@ -101,7 +114,6 @@ public class Level1 {
             Shop.earnMoney(wizard, 15);
             Shop.enterShop(wizard);
         }
-
     }
 }
 
