@@ -63,6 +63,7 @@ public class Level2 {
             Shop.earnMoney(wizard, 20);
             Shop.enterShop(wizard);
         }
+    });
     }
 
 }

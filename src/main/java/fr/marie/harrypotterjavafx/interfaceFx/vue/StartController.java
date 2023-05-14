@@ -20,6 +20,7 @@ public class StartController {
 
     public StartController(StartVue startVue, HelloApplication helloApplication) {
         this.startVue = startVue;
+        //this.startVue.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style.css")).toExternalForm());
         this.startVue.startButton.setOnAction(this::onPlayAction);
     }
 

@@ -15,8 +15,9 @@ import static fr.marie.harrypotterjavafx.interfaceFx.vue.WindowTalk.nextButton;
 
 public class Level1 {
 
-    public void start(Wizard wizard){
+    private int counter;
 
+    public void start(Wizard wizard) {
         //spells and potions contain the spells and potions that are accessible to the wizard, and are updated starting each levels.level.
         List<Spell> spells = new ArrayList<>();
         Spell wingardiumLeviosa = new Spell("Wingardium Leviosa", 1, 40);
@@ -66,11 +67,12 @@ public class Level1 {
             //you can't throw more than 6 objects
             while (counter < 15 && enemy.getLife() > 0 && wizard.getLife() > 0) {
                 System.out.println("Which object to you want to choose ? (1-chandelier , 2-table, 3-rock ou 4-lavabo)");
-                int index = 0;
-                while (index > 4 || index < 1) {
-                    System.out.println("Please, enter a number from 1 to 4");
-                    index = scanner.nextInt();
-                }
+                //int index = 0;
+                //while (index > 4 || index < 1) {
+                //    System.out.println("Please, enter a number from 1 to 4");
+                //    index = scanner.nextInt();
+                //}
+                int index = WindowTalk.askForInt("Which object to you want to choose ? (\n1-chandelier , \n2-table, \n3-rock ou \n4-lavabo)", 1, 4);
                 Object object = objects.get(index - 1);
                 System.out.println("You cast Wingardium Leviosa on the " + object.getName() + ". ");
                 //WindowTalk.printInWindow("You cast Wingardium Leviosa on the " + object.getName() + ". ");
@@ -128,6 +130,7 @@ public class Level1 {
             });
         });
     }
+
 }
 
 

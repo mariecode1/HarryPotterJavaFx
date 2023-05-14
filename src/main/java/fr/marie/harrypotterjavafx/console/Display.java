@@ -1,5 +1,7 @@
 package fr.marie.harrypotterjavafx.console;
 
+import fr.marie.harrypotterjavafx.interfaceFx.vue.WindowTalk;
+
 import java.util.Scanner;
 
 public class Display {
@@ -18,13 +20,14 @@ public class Display {
     }
 
     public static void doYouStart(){
-        Scanner scanner=new Scanner(System.in);
-        float answer=0;
-        while (answer!=1 && answer!=2){
-            System.out.println("Are you ready to start the adventure ?");
-            System.out.println("1- Yes   ||    2- Exit");
-            answer =scanner.nextInt();
-        }
+        //Scanner scanner=new Scanner(System.in);
+        //float answer=0;
+        //while (answer!=1 && answer!=2){
+        //    System.out.println("Are you ready to start the adventure ?");
+        //    System.out.println("1- Yes   ||    2- Exit");
+        //    answer =scanner.nextInt();
+        //}
+        float answer = WindowTalk.askForInt("Are you ready to start the adventure ?\n1- Yes\n2- Exit",1,2);
         if (answer==1){
             return;
         }
@@ -32,6 +35,7 @@ public class Display {
             System.exit(0);
         }
     }
+
     public static void continuee(){
         Scanner scanner=new Scanner(System.in);
         Display.fullSeparator();

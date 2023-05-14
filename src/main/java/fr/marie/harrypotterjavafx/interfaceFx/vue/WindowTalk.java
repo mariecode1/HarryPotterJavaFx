@@ -17,7 +17,10 @@ import javafx.util.Duration;
 import java.util.Optional;
 
 public class WindowTalk {
+
     public static Stage stagetext = new Stage();
+    public static Button nextButton;
+    public static Scene scene;
 
     public static void printInWindow(String text) {
         printInWindow(text, stagetext, 0);
@@ -27,8 +30,6 @@ public class WindowTalk {
         printInWindow(text, stagetext, delay);
     }
 
-    public static Button nextButton;
-    public static Scene scene;
 
     public static void printInWindow(String text, Stage stage, int delay) {
         VBox root = new VBox();
