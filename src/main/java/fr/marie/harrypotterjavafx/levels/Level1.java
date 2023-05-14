@@ -13,7 +13,7 @@ public class Level1 {
 
         //spells and potions contain the spells and potions that are accessible to the wizard, and are updated starting each levels.level.
         List<Spell> spells = new ArrayList<>();
-        Spell wingardiumLeviosa = new Spell("Wingardium Leviosa", 1, 40);
+        Spell wingardiumLeviosa = new Spell("Wingardium Leviosa", 1, 50);
         spells.add(wingardiumLeviosa);
         /////////////////////////////////////////////////////////////
         Potion HEALER= new Potion("Healing Potion", 10.0f, "Increases your life points", 10.0f);
