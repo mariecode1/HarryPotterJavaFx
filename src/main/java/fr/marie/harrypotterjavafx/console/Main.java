@@ -3,24 +3,21 @@ package fr.marie.harrypotterjavafx.console;
 import fr.marie.harrypotterjavafx.levels.*;
 import fr.marie.harrypotterjavafx.main_pack.*;
 
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        Wizard wizard= Main.startGame();
-        Level1 level1 = new Level1();
-        Level2 level2 = new Level2();
+        //Wizard wizard= Main.startGame();
+        //Level1 level1 = new Level1();
+        //level1.start(wizard);
+        //Display.continuee();
+        //Level2 level2 = new Level2();
+        //level2.start(wizard);
+        //Display.continuee();
         Level3 level3 = new Level3();
-        Level4 level4 = new Level4();
-        Level5 level5 = new Level5();
-        Level6 level6 = new Level6();
-        Level7 level7 = new Level7();
-        level1.start(wizard);
-        Display.continuee();
-        level2.start(wizard);
-        Display.continuee();
         level3.start(wizard);
         Display.continuee();
         level4.start(wizard);

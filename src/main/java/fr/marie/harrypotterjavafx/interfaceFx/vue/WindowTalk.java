@@ -74,7 +74,7 @@ public class WindowTalk {
         root.getChildren().add(imageperso);
         //root.getChildren().add(imageperso2);
 
-        Button nextButton = new Button("Suivant");
+        Button nextButton = new Button("Next");
         nextButton.setOnAction(event -> {
             stage.close();
         });
@@ -131,7 +131,7 @@ public class WindowTalk {
                 dialog.setHeaderText(message);
             }
 
-            dialog.setContentText("Saisis un nombre entre " + min + " et " + max + ":");
+            dialog.setContentText("Enter a number between " + min + " and " + max + ":");
 
             Optional<String> result = dialog.showAndWait();
 

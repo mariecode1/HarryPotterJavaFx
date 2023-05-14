@@ -57,7 +57,7 @@ public class Display {
         for (String mot : mots) { // Parcours chaque mot dans le tableau
             System.out.print(mot + " "); // Affiche le mot suivi d'un espace
             try {
-                Thread.sleep(100); // Met le thread en pause pendant une seconde
+                Thread.sleep(0); // Met le thread en pause pendant une seconde
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

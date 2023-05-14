@@ -1,6 +1,8 @@
 package fr.marie.harrypotterjavafx.levels;
+
 import fr.marie.harrypotterjavafx.console.Display;
 import fr.marie.harrypotterjavafx.main_pack.*;
+
 import java.util.Scanner;
 
 public class Level {
@@ -16,11 +18,9 @@ public class Level {
         Display.fullSeparator();
         if (answer==1){
             return 1;
-        }
-        else if (answer==2){
+        } else if (answer == 2) {
             return 0;
-        }
-        else {
+        } else {
             return 0;
         }
 

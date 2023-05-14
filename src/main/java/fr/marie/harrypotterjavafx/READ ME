@@ -1,0 +1,19 @@
+To start the game, enter the file org.example/console/Main.java
+and press 'Run Main'
+
+For each question, type the number of your answer and press ENTER
+
+Game Steps :
+- Type your name and press enter.
+- The HOUSE, the PET and the WAND of the player are set randomly
+- If you want to start the game, type 1
+- If you want to leave the game, type 2
+- If you typed 1, the game start.
+
+LEVEL PARTICULARITIES
+-LEVEL1 :
+Choose an object and throw it at the troll using Wingardium leviosa
+Each object has a "weight" attribute. Therefore, they have a different impact.
+You can throw maximum 8 objects on the troll, so choose the heaviest ones
+
+-LEVEL2 :

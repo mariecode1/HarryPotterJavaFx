@@ -22,7 +22,7 @@ public class HelloApplication extends Application {
     public void showStartScene() {
         StartVue startVue = new StartVue();
         StartController startController = new StartController(startVue, this);
-        Scene scene = new Scene(startVue, 800, 600);
+        Scene scene = new Scene(startVue, 700, 500);
         stage.setTitle("Harry Potter Game");
         stage.setScene(scene);
         stage.show();
